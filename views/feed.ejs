@@ -3,13 +3,101 @@
 <main>
     <div>
         <section>
-            <h2><%= post.title %></h2>
+            <ul>
+                <% for(var i=0; i<posts.length; i++) {%>
+                    <li>
+                        <div>
+                            <div>
+                                <!--user id and image-->
+                                <!--user department-->
+                                <h2><%= post.title %></h2>
+                            </div>
+                            <div class="col-3 mt-5">
+                                <p><%= post.destination %></p>
+                                <p><%= post.carrier %></p>
+                                <p><%= post.ttype %></p>
+                                <p><%= post.ltime %></p>
+                                <p><%= post.transit %></p>
+                                <p><%= post.special %></p>
+                            </div>
+                            <%if(post.user == user.id){ %>
+                            <form
+                            action="/post/deletePost/<%= post.id %>?_method=DELETE"
+                            method="POST"
+                            class=""
+                          >
+                            <button class="" type="submit"></button>
+                          </form>
+                          <%}%>
+                        </div>
+                        <div>    
+                            <div>
+                                <h2>Requests</h2>
+                                <form action="/comment/createComment/<%=post._id%>" method="POST">
+                                    <div class="">
+                                        <label for="comment" class="form-label">Comment</label>
+                                        <input type="text" class="form-control" id="comment" name="comment">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                                </form>
+                            </div>
+                            <div>
+                                <ul> 
+                                <% for(var i=0; i<comments.length; i++) {%>
+                                    <li class="col-6 justify-content-between mt-5">
+                                    <%= comments[i].comment%> 
+                                    </a>
+                                    </li>
+                                <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+    </div>
 </main>
 
 <section class="sidebar">
-    <div>  
-        <form>
-
+    <div class="mt-5">
+        <h2>Add a Route</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title">
+          </div>
+          <div class="mb-3">
+            <label for="caption" class="form-label">Caption</label>
+            <textarea class="form-control" id="caption" name="caption"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <textarea class="form-control" id="destination" name="destination"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="carrier" class="form-label">Carrier</label>
+            <textarea class="form-control" id="carrier" name="carrier"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="ttype" class="form-label">Truck Type</label>
+            <textarea class="form-control" id="ttype" name="ttype"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="ltime" class="form-label">Load Time</label>
+            <textarea class="form-control" id="ltime" name="ltime"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="transit" class="form-label">Transit Time</label>
+            <textarea class="form-control" id="transit" name="transit"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="special" class="form-label">Special</label>
+            <textarea class="form-control" id="special" name="special"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
         </form>
-    </div>
+      </div>
 </section>
+
+<%- include('partials/footer') -%>
