@@ -10,8 +10,8 @@ const PostSchema = new mongoose.Schema({
         ref: 'User'
     },
     department: {
-        type: mongoose.Schema.Type.ObjectId,
-        ref: 'department'
+        type: String,
+        ref: true,
     },
     carrier: {
         type: String,
