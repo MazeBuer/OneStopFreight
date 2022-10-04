@@ -41,7 +41,7 @@ module.exports = {
                 special: req.body.special
             });
             console.log('Post has been added')
-            res.redirect('/profile')
+            res.redirect('/post')
         } catch(err) {
             console.log(err)
         }

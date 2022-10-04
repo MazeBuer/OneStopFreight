@@ -11,9 +11,9 @@ router.get('/', homeController.getIndex)
 router.get('/profile', ensureAuth, postsController.getProfile);
 router.get('/feed', ensureAuth, postsController.getFeed);
 router.get('/login', authController.getLogin);
-router.get('/login', authController.postLogin);
+router.post('/login', authController.postLogin);
 router.get('/logout', authController.logout);
 router.get('/signup', authController.getSignup);
-router.get('/signup', authController.postSignup);
+router.post('/signup', authController.postSignup);
 
 module.exports = router;

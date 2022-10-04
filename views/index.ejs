@@ -1,20 +1,27 @@
+<%- include('partials/header') -%> <!--the header from header.ejs-->
+
 <main>
     <section>
-        <h1>One Stop Freight</h1>
-        <h3>Shipping information and Team communication in one</h3>
+        <section>
+            <h1>New way of communicating and transportation</h1>
+            <h3>One Stop Freight</h3>
+        </section>
+    </section>
+
+    <section>
+        <div class="container"> 
+            <div>
+                <p>Designed to improve workplace communication and strategize transportation plans effeciently. All while also providing the necessary guidelines set by United States CBP for transporting cargo.</p>
+            </div>
+            <div>
+                <p>Communication Board</p>
+                <p>PORT Codes</p>
+                <p>FIRMS Codes</p>
+                <p>CBP Approved Facilities</p>
+            </div>
+        </div>
     </section>
 </main>
-
-<section>
-    <div class="container"> 
-        <div>
-            <h2>The New Modern Way of Transportation</h2>
-        </div>
-        <div>
-            <p>About</p>
-        </div>
-    </div>
-</section>
 
 <section>
     <div class="container">
@@ -22,10 +29,15 @@
             <h3>Log In or Sign Up now</h3>
             <p>Log in or Sing up below to get access to all the great features</p>
         </div>
-        <div>
-            <button> <!--button of log in or sing up -->
-            <form>
-            </form>
-        </div>
+         <div>   
+            <div>
+                <a href="/login">Log In</a>
+            </div>
+            <div>
+                <a href="/signup">Sign Up</a>
+            </div>
+         </div>
     </div>
 </section>
+
+<%- include('partials/footer') -%>

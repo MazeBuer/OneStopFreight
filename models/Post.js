@@ -6,12 +6,12 @@ const PostSchema = new mongoose.Schema({
         required: true,
     },
     user: {
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
     department: {
         type: String,
-        ref: true,
+        required: true,
     },
     carrier: {
         type: String,

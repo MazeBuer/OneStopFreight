@@ -14,8 +14,8 @@ const CommentSchema = new mongoose.Schema({
         ref: 'Post',
     },
     department: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'department',
+        type: String,
+        required: true,
     },
     createdAt: {
         type: Date,
@@ -23,4 +23,4 @@ const CommentSchema = new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('Comment', CommentSchema)
+module.exports = mongoose.model("Comment", CommentSchema);

@@ -7,10 +7,10 @@
       <div class="alert alert-danger"><%= el.msg %></div>
       <% }) %> <% } %> <% if (locals.messages.info) { %> <%
       messages.info.forEach( el => { %>
-      <div class="alert alert-info"><%= el.msg %></div>
+      <div><%= el.msg %></div>
       <% }) %> <% } %>
       <form action="/login" method="POST">
-        <div class="mb-3">
+        <div >
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
           >
@@ -22,7 +22,7 @@
             name="email"
           />
         </div>
-        <div class="mb-3">
+        <div >
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
             type="password"
@@ -31,7 +31,7 @@
             name="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="">Submit</button>
       </form>
     </section>
   </div>
