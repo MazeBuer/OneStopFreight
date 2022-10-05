@@ -23,9 +23,10 @@ module.exports = {
             const post = await Post.findById(req.params.id);
             const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).lean();
             res.render("post.ejs", { post: post, user: req.user, comments: comments });
-            console.log('getPost on post page!')
+            console.log('getPost on post page!');
         } catch(err) {
-            console.log(err)
+            console.log(err);
+            console.log('getPost did not work');
         }
     },
     createPost: async (req,res) => {
@@ -39,7 +40,7 @@ module.exports = {
                 ttype: req.body.ttype,
                 ltime: req.body.ltime,
                 transit: req.body.transit,
-                special: req.body.special
+                special: req.body.special,
             });
             console.log('Post has been added')
             res.redirect('/post')

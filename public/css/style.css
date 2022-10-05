@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 html {
-    margin: 0 3rem;
     font-family: poppins, 'Open-Sans';
 }
 
@@ -21,8 +20,15 @@ nav ul {
     padding-top: 2.5em;
 }  */
 
+.index {
+    padding: 12rem 2rem 2rem 2rem;
+    background-image: url('/images/IndexBackground.png');
+    background-position: center;
+    object-fit: contain;
+}
+
 .logo {
-    width: 10vh;
+    width: 15vh;
 } 
 
 
@@ -32,7 +38,7 @@ nav {
     justify-content: space-around;
     position: fixed;
     width: 100%;
-    background: white;
+    background: #f0fbff;
     z-index: 99;
   }
   
@@ -165,7 +171,7 @@ nav {
 .mainIndex {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 12rem;
+    
 }
 
 .mainIndex section {
@@ -196,18 +202,20 @@ nav {
 
 .list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 1rem;
+    font-size: 1rem;
 }
 
 .loginIndex {
     text-align: center;
-    padding-top: 4rem;
+    padding: 5rem 0;
 }
 
 .linkLog {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-top: 3rem;
 }
 
 @media (max-width: 780px) {
@@ -226,3 +234,54 @@ nav {
     }
 }
 
+/* Landing */
+.landing {
+    padding: 12rem 2rem 2rem 2rem;
+    background-color: #f0fbff;
+    background-position: center;
+    object-fit: contain;
+}
+.mainLand {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 3.5rem;
+}
+
+.aboutLand {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+.mainLand h1 {
+    color: #6c9ca3;
+}
+.aboutLorem {
+    max-width: 600px;
+}
+.imagesLand {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagesLand section {
+    align-items: center;
+}
+
+
+/* Feed Page */
+.containerFeed {
+    padding: 15rem 0;
+}
+
+.secFeed {
+    display: flex;
+    justify-content: center;
+}
+
+/* profile */
+
+.containerProfile {
+    padding-top: 15rem;
+}

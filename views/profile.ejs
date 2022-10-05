@@ -1,7 +1,7 @@
 
 
 <%- include('partials/header') -%>
-<div class="container">
+<div class="containerProfile">
   <div class="row mt-5">
       <div class="col-6">
           <div>
@@ -11,38 +11,38 @@
           </div>
           <div class="mt-5">
             <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <form action="/post/createPost"  method="POST">
               <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control input input-bordered input-primary w-full max-w-xs" id="title" name="title">
             </div>
             <div class="mb-3">
               <label for="department" class="form-label">Department</label>
-              <textarea class="form-control" id="department" name="department"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="department" name="department"></textarea>
             </div>
             <div class="mb-3">
               <label for="destination" class="form-label">Destination</label>
-              <textarea class="form-control" id="destination" name="destination"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="destination" name="destination"></textarea>
             </div>
             <div class="mb-3">
               <label for="carrier" class="form-label">Carrier</label>
-              <textarea class="form-control" id="carrier" name="carrier"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="carrier" name="carrier"></textarea>
             </div>
             <div class="mb-3">
               <label for="ttype" class="form-label">Truck Type</label>
-              <textarea class="form-control" id="ttype" name="ttype"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="ttype" name="ttype"></textarea>
             </div>
             <div class="mb-3">
               <label for="ltime" class="form-label">Load Time</label>
-              <textarea class="form-control" id="ltime" name="ltime"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="ltime" name="ltime"></textarea>
             </div>
             <div class="mb-3">
               <label for="transit" class="form-label">Transit Time</label>
-              <textarea class="form-control" id="transit" name="transit"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="transit" name="transit"></textarea>
             </div>
             <div class="mb-3">
               <label for="special" class="form-label">Special</label>
-              <textarea class="form-control" id="special" name="special"></textarea>
+              <textarea class="form-control input input-bordered input-primary w-full max-w-xs" id="special" name="special"></textarea>
             </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
@@ -54,6 +54,7 @@
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
+              <p><%= posts[i].user %></p>
             </a>
           </li>
         <% } %>

@@ -1,42 +1,43 @@
 <%- include('partials/header') -%> <!--the header from header.ejs-->
 
-<main class="mainIndex">
-    
-    <section class="sec1index">
-        <h1>The new way of communication<br> and transportation</h1>
-        <h3>One Stop Freight</h3>
-    </section>
-    
+<section class="index">
+    <main class="mainIndex">
+        
+        <section class="sec1index">
+            <h1>The new way of communication<br> and transportation</h1>
+            <h3>One Stop Freight</h3>
+        </section>
+        
 
-    <section>
-        <div class="sec2index"> 
-            <div class="short">
-                <p>Designed to improve workplace communication and strategize transportation plans effeciently. All while also providing the necessary guidelines set by United States CBP for transporting cargo.</p>
+        <section>
+            <div class="sec2index"> 
+                <div class="short">
+                    <p>Designed to improve workplace communication and strategize transportation plans effeciently. All while also providing the necessary guidelines set by United States CBP for transporting cargo.</p>
+                </div>
+                <div class="list">
+                    <p class="btn no-animation">Communication Board</p>
+                    <p class="btn no-animation">PORT Codes</p>
+                    <p class="btn no-animation">FIRMS Codes</p>
+                    <p class="btn no-animation">CBP Approved Facilities</p>
+                </div>
             </div>
-            <div class="list">
-                <p>Communication Board</p>
-                <p>PORT Codes</p>
-                <p>FIRMS Codes</p>
-                <p>CBP Approved Facilities</p>
+        </section>
+    </main>
+
+    <section class="loginIndex">
+        <div class="containerL">
+            <div>
+                <h3>Log in or Sing up below to get access to all the great features</h3>
+            </div>
+            <div class="linkLog">   
+                <div class="btn btn-info">
+                    <a href="/login">Log In</a>
+                </div>
+                <div class="btn btn-info">
+                    <a href="/signup">Sign Up</a>
+                </div>
             </div>
         </div>
-    </section>
-</main>
-
-<section class="loginIndex">
-    <div class="containerL">
-        <div>
-            <h3>Log in or Sing up below to get access to all the great features</h3>
-        </div>
-         <div class="linkLog">   
-            <div>
-                <a href="/login">Log In</a>
-            </div>
-            <div>
-                <a href="/signup">Sign Up</a>
-            </div>
-         </div>
-    </div>
 </section>
-
+</section>
 <%- include('partials/footer') -%>

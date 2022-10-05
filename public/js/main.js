@@ -42,3 +42,31 @@ function navHighlighter() {
     }
   });
 }
+
+
+// API 
+
+document.querySelector('#getButton').addEventListener('click', apiRequest)
+
+
+async function apiRequest() {
+    const portCodes = document.querySelector('input').value
+    try {
+        const response = await fetch(`https://simple-startrek-apis.herokuapp.com/api/${portCodes}`)
+        const data = await response.json()
+        console.log(data)
+
+        document.getElementById('alienName').innerText = data.speciesName
+        document.getElementById('alienWorld').innerText = data.homeWorld
+        document.getElementById('alienFeatures').innerText = data.features
+        document.getElementById('alienFacts').innerText = data.interestingFact
+        document.getElementById('alienExamples').innerText = data.notableExamples
+
+        document.getElementById('alienImage').src = data.image
+        document.getElementById('alienCaption').innerText = data.speciesName
+
+
+    }catch (error){
+        console.log('error')
+    }
+}
