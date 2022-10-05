@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const PostSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        // required: true,
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -11,31 +11,31 @@ const PostSchema = new mongoose.Schema({
     },
     department: {
         type: String,
-        required: true,
+        // required: true,
     },
     carrier: {
         type: String,
-        required: true,
+        // required: true,
     },
     destination: {
         type: String,
-        required: true,
+        //required: true,
     },
     ttype: {
         type: String,
-        required: true,
+        //required: true,
     },
     ltime: {
         type: String,
-        required: true,
+        //required: true,
     },
     transit: {
         type: String,
-        required: true,
+        //required: true,
     },
     special: {
         type: String,
-        required: true,
+       // required: true,
     },
     createdAt: {
         type: Date,

@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
     <title>One Stop Freight</title>
 </head>
 
 <body>
+    
     <header>
         <nav>
-            <img src="" alt="logo">
-            <ul>
-                <li>Profile</li>
-                <li>Transport Feed</li>
-                <li>Port Codes</li>
-                <li>Currency</li>
+            <div>
+                <img class="logo" src="/images/OneStopLogo.png" alt="logo">
+            </div>
+            <ul id="nav">
+                <li><a href="/views/profile.ejs">Profile</a></li>
+                <li><a href="/views/feed.ejs">Transport Feed</a></li>
+                <li><a href="/views/portCode.ejs">Port Codes</a></li>
             </ul>
-            <img src="#" alt="profile">
+            <div class="menu" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
+
