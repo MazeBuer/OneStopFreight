@@ -7,14 +7,17 @@
             <div class="card w-96 bg-neutral text-neutral-content">
               <ul class="card-body items-center text-center">
                 <% for(var i=0; i<posts.length; i++) {%>
-                  <li class="col-6 justify-content-between mt-5">
+                  <li class="listCard">
                     <a href="/post/<%= posts[i]._id%>"></a>
-                    <h2><%= posts[i].title %>
-                      <div>Title</div>
-                    </h2>
-                    <h2> <%= posts[i].department %>
-                      <div>Department</div>
-                    </h2>
+                    <h2><%= posts[i].title %></h2>
+                    <h2> <%= posts[i].department %></h2>
+                    <h2> <%= posts[i].carrier %></h2>
+                    <h2> <%= posts[i].destination %></h2>
+                    <h2> <%= posts[i].ttype %></h2>
+                    <h2> <%= posts[i].ltime %></h2>
+                    <h2> <%= posts[i].transit %></h2>
+                    <h2> <%= posts[i].special %></h2>
+                      
                   </li>
                 <% } %>
                 </ul>

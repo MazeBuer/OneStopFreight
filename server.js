@@ -66,29 +66,6 @@ app.use('/', mainRoutes);
 app.use('/post', postRoutes);
 app.use('/comment', commentRoutes);
 
-//MongoDB database
-// MongoClient.connect(connectionString)
-//     .then(client => {
-//         console.log('Connedted to Database')
-//         const db = client.db('CBP') //name the alien-names collection is under. not the new Database
-//         const infoCollection = db.collection('Port-Codes')
-    
-//         app.get('/', (request, response)=>{
-//             response.sendFile(__dirname + '/.portCode.ejs')
-//         })
-        
-//         app.get('/api/:portCodes', (request,response)=>{
-//             const portCodes = request.params.portCodes.toLowerCase()
-//                 infoCollection.find({name: portCodes}).toArray()  //turn into array to brin back object
-//                 .then(results => {
-//                     console.log(results)
-//                     response.json(results[0])
-//                 })
-//                 .catch(error => console.error(error))
-//         })        
-
-//     })
-//     .catch(error => console.error(error))
 
 //Server Running
 app.listen(process.env.PORT, () => {

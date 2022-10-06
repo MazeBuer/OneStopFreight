@@ -2,7 +2,7 @@
 
 <%- include('partials/header') -%>
 <div class="containerProfile">
-  <div class="row mt-5">
+  <div class="divRow">
       <div class="col-6">
           <div>
               <p><strong>User Name</strong>: <%= user.userName %></p>
@@ -48,13 +48,20 @@
             </form>
           </div>
       </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
+      <div class="">
+        <ul class="card w-96 bg-neutral text-neutral-content">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
+          <li class="card-body items-center text-center">
+            <a href="/post/<%= posts[i]._id %>">
               <img class="img-fluid" src="<%= posts[i].image%>">
-              <p><%= posts[i].user %></p>
+              <p><%= posts[i].title %></p>
+              <p><%= posts[i].department %></p>
+              <p><%= posts[i].carrier %></p>
+              <p><%= posts[i].destination %></p>
+              <p><%= posts[i].ttype %></p>
+              <p><%= posts[i].ltime %></p>
+              <p><%= posts[i].transit %></p>
+              <p><%= posts[i].special %></p>
             </a>
           </li>
         <% } %>
