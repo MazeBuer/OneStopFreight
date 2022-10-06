@@ -55,14 +55,28 @@ app.use(
 );
 
 //MongoDB API
-app.get('/api/:ports', (req,res) => {
-    const portC = req.params.ports.toLowerCase()
-    if(portCodesAPI[ports]) {
-        res.json(portCodesAPI[ports])
-    }else {
-        response.json(portCodesAPI['N/A'])
-    }
-})
+
+MongoClient.connect(process.env.DB_STRING, {useUnifiedTopology: true, useNewUrlParser: true})
+    .then(client => {
+        console.log('connected to Database CBP')
+        const db = client.db('CBP')
+        const infoCollection = db.collection('portCodesAPI')
+
+        app.get('/portCode', (req,res) => {
+            res.sendFile(__dirname + '/portCode.ejs')
+        })
+
+        app.get('portCode/api/:name', (req,res) => {
+            const namesFac = req.params.name.toLowerCase()
+            if(port[namesFac]) {
+                res.json(port[namesFac])
+            }else {
+                response.json(port['N/A'])
+            }
+        })
+        
+    })
+    .catch(error => console.log(error))
 
 
 //Passport Middleware

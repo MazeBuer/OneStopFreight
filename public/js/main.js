@@ -52,18 +52,19 @@ document.querySelector('#getButton').addEventListener('click', apiRequest)
 async function apiRequest() {
     const portCodes = document.querySelector('input').value
     try {
-        const response = await fetch(`https://simple-startrek-apis.herokuapp.com/api/${portCodes}`)
+        const response = await fetch(`https://simple-startrek-apis.herokuapp.com/api/${alienName}`)
         const data = await response.json()
         console.log(data)
 
-        document.getElementById('alienName').innerText = data.speciesName
-        document.getElementById('alienWorld').innerText = data.homeWorld
-        document.getElementById('alienFeatures').innerText = data.features
-        document.getElementById('alienFacts').innerText = data.interestingFact
-        document.getElementById('alienExamples').innerText = data.notableExamples
-
-        document.getElementById('alienImage').src = data.image
-        document.getElementById('alienCaption').innerText = data.speciesName
+        document.getElementById('firm').innerText = data.firm
+        document.getElementById('name').innerText = data.name
+        document.getElementById('street').innerText = data.street
+        document.getElementById('city').innerText = data.city
+        document.getElementById('state').innerText = data.state
+        document.getElementById('zip').innerText = data.zip
+        document.getElementById('stat').innerText = data.stat
+        document.getElementById('fac-type').innerText = data.fac-type
+        document.getElementById('port').innerText = data.port
 
 
     }catch (error){
