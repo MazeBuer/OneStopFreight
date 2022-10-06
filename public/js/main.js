@@ -52,7 +52,7 @@ document.querySelector('#getButton').addEventListener('click', apiRequest)
 async function apiRequest() {
     const portCodes = document.querySelector('input').value
     try {
-        const response = await fetch(`https://simple-startrek-apis.herokuapp.com/api/${alienName}`)
+        const response = await fetch(`https://one-stop-api.herokuapp.com/portCode/api/${name}`)
         const data = await response.json()
         console.log(data)
 
