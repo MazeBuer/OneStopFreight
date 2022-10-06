@@ -68,11 +68,12 @@ MongoClient.connect(process.env.DB_STRING, {useUnifiedTopology: true, useNewUrlP
 
         app.get('portCode/api/:name', (req,res) => {
             const namesFac = req.params.name.toLowerCase()
-            if(port[namesFac]) {
-                res.json(port[namesFac])
-            }else {
-                response.json(port['N/A'])
-            }
+            infoCollection.find({name: name}).toArray()
+            .then(results => {
+                console.log(results)
+                response.json(results[0])
+            })
+            .catch(error => console.error(error))
         })
         
     })
