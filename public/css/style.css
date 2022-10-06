@@ -396,12 +396,29 @@ nav {
 
 /* PortCodes */
 
-.portSec {
+.portBack {
   background-image: url('/images/IndexBackground.png');
   background-position: center;
   object-fit: contain;
   background-repeat: no-repeat;
   background-color: #f0fbff;
   padding: 0 4rem;
-  padding-top: 15rem;
+  padding: 15rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.porSec {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  /* padding: 10px; */
+  position: relative;
+  text-align: center;
+  
+}
+.toDo {
+  padding: 3rem 0;
 }

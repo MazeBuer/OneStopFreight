@@ -1,26 +1,33 @@
 <%- include('partials/header') -%> <!--the header from header.ejs-->
-
-<section class="portSec">
-    <div>
-        <input type="text">
-        <div class="buttons">
-            <button class="btn btn-outline btn-info" id="getButton">Get Info</button>
+<section class="portBack">
+    <section class="portSec">
+    <section class="toDo">
+        <h1>Input the facility name and receive the necessary CBP information for shipping. </h1>
+    </section>
+    <section class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card-body divBodyport">
+            <div>
+                <input type="text" class="input input-bordered input-info w-full max-w-xs">
+                <div class="buttons">
+                    <button class="btn btn-outline btn-info" id="getButton">Get Info</button>
+                </div>
+            </div>
+            <div>
+                <ul class="lcars-list">
+                    <li><span>Firm: </span><span id="firm"></span></li>
+                    <li><span>Port: </span><span id="port"></span></li>
+                    <li><span>Facility: </span><span id="name"></span></li>
+                    <li><span>Street: </span><span id="street"></span></li>
+                    <li><span>City: </span><span id="city"></span></li>
+                    <li><span>State: </span><span id="state"></span></li>
+                    <li><span>Zip: </span><span id="zip"></span></li>
+                    <li><span>Stat: </span><span id="stat"></span></li>
+                    <li><span>Fac Type: </span><span id="fac-type"></span></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div>
-        <ul class="lcars-list">
-            <li><span>Firm: </span><span id="firm"></span></li>
-            <li><span>Port: </span><span id="port"></span></li>
-            <li><span>Facility: </span><span id="name"></span></li>
-            <li><span>Street: </span><span id="street"></span></li>
-            <li><span>City: </span><span id="city"></span></li>
-            <li><span>State: </span><span id="state"></span></li>
-            <li><span>Zip: </span><span id="zip"></span></li>
-            <li><span>Stat: </span><span id="stat"></span></li>
-            <li><span>Fac Type: </span><span id="fac-type"></span></li>
-        </ul>
-    </div>
+    </section>
+    </section>
 </section>
-
 
 <%- include('partials/footer') -%>
