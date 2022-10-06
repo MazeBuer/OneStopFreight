@@ -27,16 +27,6 @@
         <p>Transit Time:  <%= post.transit %></p>
         <p>Special:  <%= post.special %></p>
     </div>
-    <div class="mt-5">
-      <h2>Add a comment</h2>
-      <form action="/comment/createComment/<%=post._id%>" method="POST">
-        <div class="mb-3">
-            <label for="comment" class="form-label">Comment</label>
-            <input type="text" class="form-control input input-bordered input-accent w-full max-w-xs" id="comment" name="comment">
-        </div>
-        <button type="submit" class="btn btn-outline btn-info" value="Upload">Submit</button>
-      </form>
-    </div>
     <div>
       <ul> 
         <% for(var i=0; i<comments.length; i++) {%>
@@ -47,7 +37,18 @@
         <% } %>
       </ul>
     </div>
-    
+    <section class="comment">
+      <div>
+        <h2>Add a comment</h2>
+        <form action="/comment/createComment/<%=post._id%>" method="POST">
+          <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <input type="text" class="form-control input input-bordered input-accent w-full max-w-xs" id="comment" name="comment">
+          </div>
+          <button type="submit" class="btn btn-outline btn-info" value="Upload">Submit</button>
+        </form>
+      </div>
+    </section>
   </div>
   <div class="col-6 mt-5">
     <a class="btn btn-outline btn-info" href="/profile">Return to Profile</a>

@@ -271,7 +271,7 @@ nav {
 
 
 /* Feed Page */
-.containerFeed {
+.secFeed {
     padding: 15rem 0;
 }
 
@@ -284,6 +284,11 @@ nav {
 
 .containerProfile {
     padding: 15rem 0;
+    background-image: url('/images/IndexBackground.png');
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-color: #f0fbff;
 }
 
 .divRow {
@@ -347,5 +352,56 @@ nav {
 }
 
 .glass {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  /* padding: 10px; */
+  position: relative;
   text-align: center;
+  
+}
+
+.comment {
+  padding: 2rem 0;
+}
+
+.mainFeed {
+  background-image: url('/images/IndexBackground.png');
+  background-position: center;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-color: #f0fbff;
+  padding: 0 4rem;
+}
+
+.imageFeed {
+  width: 200vw;
+}
+
+.aboutFeed {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  padding: 1rem 1.3rem 4rem 1.3rem;
+}
+
+.cardFeed {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  max-width: 500px;
+}
+
+/* PortCodes */
+
+.portSec {
+  background-image: url('/images/IndexBackground.png');
+  background-position: center;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-color: #f0fbff;
+  padding: 0 4rem;
+  padding-top: 15rem;
 }

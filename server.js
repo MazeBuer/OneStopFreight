@@ -54,6 +54,17 @@ app.use(
     })
 );
 
+//MongoDB API
+app.get('/api/:ports', (req,res) => {
+    const portC = req.params.ports.toLowerCase()
+    if(portCodesAPI[ports]) {
+        res.json(portCodesAPI[ports])
+    }else {
+        response.json(portCodesAPI['N/A'])
+    }
+})
+
+
 //Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());

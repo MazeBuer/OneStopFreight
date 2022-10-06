@@ -5,6 +5,6 @@ const {ensureAuth, ensureGuest} = require('../middleware/auth');
 
 //comment Routes
 
-router.post('/creatComment/:id', commentsController.createComment)
+router.post('/createComment/:id', commentsController.createComment)
 
 module.exports = router;
