@@ -1,8 +1,11 @@
 <%- include('partials/header') -%>
 
 <main class="containerLogin">
-  <div class="row justify-content-center">
-    <section class="col-6 mt-5">
+  <section class="signupHead">
+    <h1>Log in to get complete access to cargo posts and port facility information</h1>
+  </section>
+  <div class="card card-compact w-96 bg-base-100 shadow-xl divLogin">
+    <section class="card-body insideForm">
       <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
       <div class="alert alert-danger"><%= el.msg %></div>
       <% }) %> <% } %> <% if (locals.messages.info) { %> <%
@@ -11,12 +14,12 @@
       <% }) %> <% } %>
       <form action="/login" method="POST">
         <div >
-          <label for="exampleInputEmail1" class="form-label"
+          <label for="exampleInputEmail1" class="form-label "
             >Email address</label
           >
           <input
             type="email"
-            class="form-control"
+            class="form-control input input-bordered input-accent w-full max-w-xs"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             name="email"
@@ -26,12 +29,12 @@
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
             type="password"
-            class="form-control"
+            class="form-control input input-bordered input-accent w-full max-w-xs"
             id="exampleInputPassword1"
             name="password"
           />
         </div>
-        <button type="submit" class="">Submit</button>
+        <button type="submit" class="btn btn-outline btn-info">Submit</button>
       </form>
     </section>
   </div>

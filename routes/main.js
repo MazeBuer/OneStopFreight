@@ -10,7 +10,7 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth')
 router.get('/', homeController.getIndex)
 router.get('/landing', homeController.getLanding)
 router.get('/portCode', homeController.getPort)
-router.get('/post', ensureAuth, postsController.getProfile);
+router.get('/profile', ensureAuth, postsController.getProfile);
 router.get('/feed', ensureAuth, postsController.getFeed);
 router.get('/login', authController.getLogin);
 router.post('/login', authController.postLogin);

@@ -1,5 +1,5 @@
 const Post = require("../models/Post");
-const Comment = require("../models/commentDetails")
+const Comment = require("../models/comment")
 
 module.exports = {
     getProfile: async (req, res) => {
@@ -42,7 +42,7 @@ module.exports = {
                 special: req.body.special,
             });
             console.log('Post has been added')
-            res.redirect('/post')
+            res.redirect('/profile')
         } catch(err) {
             console.log(err)
         }

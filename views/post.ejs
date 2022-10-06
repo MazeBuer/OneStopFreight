@@ -1,9 +1,9 @@
 
 
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
+<div class="containerPost">
+  <div class="card card-compact w-96 bg-base-100 shadow-xl divLogin">
+    <div class="card-body">
       <h2><%= post.title %></h2>
       <div class="row justify-content-between">
         <%if(post.user == user.id){ %>
@@ -12,28 +12,29 @@
           method="POST"
           class="col-3"
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <button class="fa fa-trash" type="submit"></button>
         </form>
         <%}%>
       </div>
     </div>
-    <div class="col-3 mt-5">
-      <a href="<%= post.title %>" ><p><%= post.title %>Title</p></a>
-      <a href="<%= post.destination %>" ><p>Destination</p></a>
-      <a href="<%= post.carrier %>" ><p>Carrier</p></a>
-      <a href="<%= post.ttype %>" ><p>Truck Type</p></a>
-      <a href="<%= post.ltime %>" ><p>Load Time</p></a>
-      <a href="<%= post.transit %>" ><p>Transit</p></a>
-      <a href="<%= post.special %>" ><p>Special</p></a>
+    <div class="card w-96 glass">
+        <p>Company:  <%= post.title %></p>
+        <p>Dep:  <%= post.department %></p>
+        <p>Carrier:  <%= post.carrier %></p>
+        <p>Dest:  <%= post.destination %></p>
+        <p>Load Type:  <%= post.ttype %></p>
+        <p>Date/Time:  <%= post.ltime %></p>
+        <p>Transit Time:  <%= post.transit %></p>
+        <p>Special:  <%= post.special %></p>
     </div>
     <div class="mt-5">
       <h2>Add a comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
             <label for="comment" class="form-label">Comment</label>
-            <input type="text" class="form-control" id="comment" name="comment">
+            <input type="text" class="form-control input input-bordered input-accent w-full max-w-xs" id="comment" name="comment">
         </div>
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        <button type="submit" class="btn btn-outline btn-info" value="Upload">Submit</button>
       </form>
     </div>
     <div>
@@ -46,10 +47,11 @@
         <% } %>
       </ul>
     </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
-    </div>
+    
+  </div>
+  <div class="col-6 mt-5">
+    <a class="btn btn-outline btn-info" href="/profile">Return to Profile</a>
+    <a class="btn btn-outline btn-info" href="/feed">Return to Feed</a>
   </div>
 </div>
 

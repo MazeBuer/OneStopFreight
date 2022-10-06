@@ -299,6 +299,53 @@ nav {
     background-color: white;
 }
 
+
+ /* Login/Signup Page */
+
 .containerLogin {
-  padding-top: 15rem;
+    padding: 12rem 2rem;
+    background-image: url('/images/IndexBackground.png');
+    background-position: center;
+    object-fit: contain;
+}
+
+.divLogin {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  max-width: 500px;
+}
+
+.insideForm {
+  display: flex;
+  align-items: center;
+}
+
+#emailHelp {
+  color: red;
+}
+
+.signupHead {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual Post Page */
+
+.containerPost {
+  padding:12rem 0 ;
+  background-image: url('/images/IndexBackground.png');
+  background-position: center;
+  object-fit: contain;
+}
+
+.fa-trash {
+  color: #3abff8;
+}
+
+.glass {
+  text-align: center;
 }
