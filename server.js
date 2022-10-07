@@ -94,6 +94,6 @@ app.use('/comment', commentRoutes);
 
 
 //Server Running
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT || 12951, () => {
     console.log(`Server is running on ${process.env.PORT}`)
 });
