@@ -16,7 +16,7 @@
               <ul class="card-body items-center text-center">
                 <% for(var i=0; i<posts.length; i++) {%>
                   <li class="listCard">
-                    <a href="/post/<%= posts[i]._id%>"></a>
+                    <a href="/post/<%= posts[i]._id %>">
                     <h2><%= posts[i].title %></h2>
                     <h2> <%= posts[i].department %></h2>
                     <h2> <%= posts[i].carrier %></h2>
@@ -25,6 +25,7 @@
                     <h2> <%= posts[i].ltime %></h2>
                     <h2> <%= posts[i].transit %></h2>
                     <h2> <%= posts[i].special %></h2>
+                    </a>
                   </li>
                 <% } %>
                 </ul>
