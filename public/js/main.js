@@ -68,7 +68,6 @@ async function apiRequest() {
 
 
     }catch (error){
-        console.log('error with API')
         console.error(error)
     }
 }
