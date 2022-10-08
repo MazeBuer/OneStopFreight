@@ -52,7 +52,7 @@ document.querySelector('#getButton').addEventListener('click', apiRequest)
 async function apiRequest() {
     const portCodes = document.querySelector('input').value
     try {
-        const response = await fetch(``)
+        const response = await fetch(`https://one-stop-api-main.herokuapp.com/api/${port}`)
         const data = await response.json()
         console.log(data)
 

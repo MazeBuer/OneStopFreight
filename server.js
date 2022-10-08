@@ -54,30 +54,6 @@ app.use(
     })
 );
 
-//MongoDB API
-
-MongoClient.connect(process.env.DB_STRING, {useUnifiedTopology: true, useNewUrlParser: true})
-    .then(client => {
-        console.log('connected to Database CBP')
-        const db = client.db('CBP')
-        const infoCollection = db.collection('portCodesAPI')
-
-        app.get('/portCode', (req,res) => {
-            res.sendFile(__dirname + '/portCode.ejs')
-        })
-
-        app.get('portCode/api/:name', (req,res) => {
-            const namesFac = req.params.name.toLowerCase()
-            infoCollection.find({name: name}).toArray()
-            .then(results => {
-                console.log(results)
-                response.json(results[0])
-            })
-            .catch(error => console.error(error))
-        })
-        
-    })
-    .catch(error => console.log(error))
 
 
 //Passport Middleware
