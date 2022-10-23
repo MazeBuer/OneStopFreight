@@ -13,7 +13,7 @@
             <h2>Add a post</h2>
             <form action="/post/createPost"  method="POST">
               <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="form-label">Company</label>
                 <input type="text" class="form-control input input-bordered input-accent w-full max-w-xs" id="title" name="title">
             </div>
             <div class="mb-3">
@@ -33,7 +33,7 @@
               <textarea class="form-control input input-bordered input-accent w-full max-w-xs" id="ttype" name="ttype"></textarea>
             </div>
             <div class="mb-3">
-              <label for="ltime" class="form-label">Load Time</label>
+              <label for="ltime" class="form-label">Date/Time of Loading</label>
               <textarea class="form-control input input-bordered input-accent w-full max-w-xs" id="ltime" name="ltime"></textarea>
             </div>
             <div class="mb-3">
@@ -48,20 +48,21 @@
             </form>
           </div>
       </div>
-      <div class="">
+      <div class="card w-96 bg-neutral text-neutral-content cardFeed">
         <ul class="card w-96 bg-neutral text-neutral-content">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="card-body items-center text-center">
+          <li class="card-body items-center text-centers">
             <a href="/post/<%= posts[i]._id %>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-              <p><%= posts[i].title %></p>
-              <p><%= posts[i].department %></p>
-              <p><%= posts[i].carrier %></p>
-              <p><%= posts[i].destination %></p>
-              <p><%= posts[i].ttype %></p>
-              <p><%= posts[i].ltime %></p>
-              <p><%= posts[i].transit %></p>
-              <p><%= posts[i].special %></p>
+              <div class="listProfileCard">
+                <p>Company: <%= posts[i].title %></p>
+                <p>Dept: <%= posts[i].department %></p>
+                <p>Dest: <%= posts[i].carrier %></p>
+                <p>Carrier: <%= posts[i].destination %></p>
+                <p>Truck Type: <%= posts[i].ttype %></p>
+                <p>Date/Time: <%= posts[i].ltime %></p>
+                <p>Transit Time: <%= posts[i].transit %></p>
+                <p>Special: <%= posts[i].special %></p>
+              </div>
             </a>
           </li>
         <% } %>

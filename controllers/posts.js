@@ -13,6 +13,7 @@ module.exports = {
       getFeed: async (req, res) => {
         try {
           const posts = await Post.find().sort({ createdAt: "desc" }).lean(); 
+          
           res.render("feed.ejs", { posts: posts }); 
         } catch (err) {
           console.log(err);
@@ -50,7 +51,7 @@ module.exports = {
     deletePost: async(req,res) => {
         try {
             let post = await Post.findById({ _id: req.params.id});
-            await Post.remove({ _id: req.params.id});
+            await post.remove({ _id: req.params.id});
             console.log('Deleted Post')
             res.redirect('/profile')
         } catch(err) {
