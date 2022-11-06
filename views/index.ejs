@@ -1,6 +1,6 @@
 <%- include('partials/header') -%> <!--the header from header.ejs-->
 
-<section class="index">
+<!-- <section class="index">
     <main class="mainIndex">
         
         <section class="sec1index">
@@ -40,5 +40,48 @@
             </div>
         </div>
     </section>
-</section>
+</section> -->
+
+<div class="index">
+    <div class="container px-4 mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-medium mb-2">A new way of communication in transportation</h1>
+        <a href="/login"><button class="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Log In</button></a>
+        <a href="/signup"><button class="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Sign Up</button></a>
+
+        <div class="mt-4  imageDivs">
+            <img src="/images/undraw_Aircraft_re_m05i-removebg-preview.png" alt="aircraft" class="indexImages">
+            <img src="/images/undraw_Container_ship_re_alm4-removebg-preview.png" alt="shipping container" class="indexImages">
+            <img src="/images/undraw_cohort_analysis_stny-removebg-preview.png" alt="data chart" class="indexImages">
+        </div>
+
+      </div>
+
+      <div class="md:flex md:flex-wrap md:-mx-4 mt-6 md:mt-12 inPadd">
+
+        <div class="md:w-1/3 md:px-4 xl:px-6 mt-8 md:mt-0 text-center">
+          <span class="w-20 border-t-2 border-solid border-indigo-200 inline-block mb-3"></span>
+          <h5 class="text-xl font-medium uppercase mb-4">Communication Board</h5>
+          <p class="text-gray-600">View our scheduling communication board that allows agents to view and schedule current transportation.</p>
+        </div>
+
+        <div class="md:w-1/3 md:px-4 xl:px-6 mt-8 md:mt-0 text-center">
+          <span class="w-20 border-t-2 border-solid border-indigo-200 inline-block mb-3"></span>
+          <h5 class="text-xl font-medium uppercase mb-4">Port Codes</h5>
+          <p class="text-gray-600">Use our custom API to gather all necessary information needed when transfering shipments in compliance with the U.S.</p>
+        </div>
+
+        <div class="md:w-1/3 md:px-4 xl:px-6 mt-8 md:mt-0 text-center">
+          <span class="w-20 border-t-2 border-solid border-indigo-200 inline-block mb-3"></span>
+          <h5 class="text-xl font-medium uppercase mb-4">CBP Approved Facilities</h5>
+          <p class="text-gray-600">Our API gathers information from the U.S Customs and Border Protection website with a list containing approved facilities for transporting and handling freight.</p>
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+
 <%- include('partials/footer') -%>

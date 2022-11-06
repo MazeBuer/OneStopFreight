@@ -1,47 +1,68 @@
 <%- include('partials/header') -%>
 
-<main class="containerLogin">
-  <section class="signupHead">
-    <h1>Log in to get complete access to cargo posts and port facility information</h1>
-  </section>
-  <div class="card card-compact w-96 bg-base-100 shadow-xl divLogin">
-    <section class="card-body insideForm">
-      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
-      messages.info.forEach( el => { %>
-      <div><%= el.msg %></div>
-      <% }) %> <% } %>
-      <form action="/login" method="POST">
-        <div >
-          <label for="exampleInputEmail1" class="form-label "
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control input input-bordered input-accent w-full max-w-xs"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            name="email"
-          />
-        </div>
-        <div >
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control input input-bordered input-accent w-full max-w-xs"
-            id="exampleInputPassword1"
-            name="password"
-          />
-        </div>
-        <button type="submit" class="btn btn-outline btn-info">Submit</button>
-      </form>
-    </section>
-    <div>
-      <h4>Log in or Sing up below to get access to all the great features</h4>
-      <h4>Guest Log in: Guest@guest.com <br>Password: Guest1234</h4>
+
+
+
+<section class="flex flex-col md:flex-row h-screen items-center">
+
+  <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+    <img src="https://images.unsplash.com/photo-1444313431167-e7921088a9d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1441&q=100"
+    class="w-full h-full object-cover">
+  </div>
+
+  <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+        flex items-center justify-center">
+
+    <div class="w-full h-100">
+
+      <h1 class="text-xl font-bold">One Stop Freight</h1>
+      <h2>Guest Access<br>
+        Guest Log In: Guest@guest.com<br>
+        Password: Guest1234</h2>
+      <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
+
+      
+        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+        <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+        messages.info.forEach( el => { %>
+        <div><%= el.msg %></div>
+        <% }) %> <% } %>
+        <form action="/login" class="mt-6" method="POST">
+          <div >
+            <label for="exampleInputEmail1" class="block text-gray-700"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              name="email"
+            />
+          </div>
+          <div >
+            <label for="exampleInputPassword1" class="block text-gray-700">Password</label>
+            <input
+              type="password"
+              class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+              focus:bg-white focus:outline-none"
+              id="exampleInputPassword1"
+              name="password"
+            />
+          </div>
+          <button type="submit" class="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+          px-4 py-3 mt-6 changeColor">Log In</button>
+        </form>
+
+      <hr class="my-6 border-gray-300 w-full">
+
+      <p class="mt-8">Need an account? <a href="/signup" class="text-blue-500 hover:text-blue-700 font-semibold changeText">Create an
+              account</a></p>
+
     </div>
   </div>
-</main>
+
+</section>
 
 <%- include('partials/footer') -%>

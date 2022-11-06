@@ -2,24 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+
 html {
     font-family: poppins, 'Open-Sans';
 }
 
 
 .index {
-    padding: 12rem 2rem 2rem 2rem;
+    padding: 8rem 2rem 2rem 2rem;
     background-image: url('/images/IndexBackground.png');
     background-position: center;
+    background-color: #f0fbff;
     object-fit: contain;
+    background-repeat: no-repeat;
 }
 
 .logo {
-    width: 15vh;
+    width: 5vh;
 } 
 
+.indexImages {
+  width: 35vh;
+}
 
-nav {
+.imageDivs {
+  padding-left: 10rem;
+}
+
+.changeColor {
+  background-color: #6898af;
+}
+
+.changeText {
+  color: #6898af;
+}
+
+/* nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -115,9 +134,18 @@ nav {
   
   nav .menu.active span:nth-child(2) {
     transform: scale(0);
+  } */
+  @media (min-width: 1024px) {
+    .top-navbar {
+      display: inline-flex !important;
+    }
   }
-  
-@media (max-width: 650px) {
+
+  .bg-indigo-600 {
+    background-color: #6898af;
+  }
+
+/*@media (max-width: 650px) {
     nav .menu {
       display: flex;
     }
@@ -138,7 +166,7 @@ nav {
       --height: calc(
         (((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber)
       );
-      /*   (Block Level Padding + The Font Size) * The Number of Children   */
+      
       
       
       transition: 1s ease;
@@ -152,7 +180,9 @@ nav {
       width: 100%;
       text-transform: capitalize;
     }
-}
+} */
+
+
 
 /* Index Page */
 .mainIndex {
@@ -203,6 +233,10 @@ nav {
     display: flex;
     justify-content: space-evenly;
     padding-top: 3rem;
+}
+
+.inPadd {
+  padding-top: 15rem;
 }
 
 @media (max-width: 780px) {
@@ -448,4 +482,10 @@ nav {
 }
 .btnPort {
   margin: 0 40%;
+}
+
+
+/*Footer*/
+.footer {
+  background-color: #1f2937;
 }
