@@ -38,6 +38,10 @@ html {
   color: #6898af;
 }
 
+.hMain {
+  background-color: #f0fbff;
+}
+
 /* nav {
     display: flex;
     align-items: center;

@@ -1,41 +1,56 @@
 <%- include('partials/header') -%> <!--the header from header.ejs-->
 
-<main class="mainFeed">
-    <div>
-        <section class="secFeed">
-          <div class="containerFeed">
-            <div class="aboutFeed">
-              <div>
-                <h1>View the current available open transporation sapce from other agents. If you would like to add your shipment to one of the below add a comment!</h1>
+
+<div class="text-center hMain py-20">
+  <section class="">
+    <h1 class="text-xl">View the current available open transporation sapce from other agents.<br>If you would like to add your shipment to one of the below, add a comment!</h1>
+  </section>
+</div>
+
+<main class="mainFeed flex justify-center item-center">
+    <div class="max-w-md flex  min-h-screen justify-center item-center pb-10">
+      <div class="self-center max-w-sm w-full  shadow px-6 py-6 bg-white rounded-lg mb-6">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <div class="flex justify-between mb-4">
+              <div class="mb-2 text-left">
+                  <h2 class="mb-2 text-gray-900 text-lg">Company: <%= posts[i].title %></h2>
+                  <p class="uppercase font-bold text-gray-600 text-xs">Dept: <%= posts[i].department %></p>
               </div>
-              <div>
-                <img class="imageFeed" src="/images/Web_capture_5-10-2022_214719_-removebg-preview.png">
+              <div class="text-right pl-5">
+                  <a href="/post/<%= posts[i]._id %>">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm py-2 px-5 rounded-lg focus:shadow-outline shadow">
+                        Comment
+                    </button>
+                  </a>
               </div>
-            </div>
-            <div class="card w-96 bg-neutral text-neutral-content cardFeed">
-              <ul class="card-body items-center text-center">
-                <% for(var i=0; i<posts.length; i++) {%>
-                  <li class="listCard">
-                    <a href="/post/<%= posts[i]._id %>">
-                      <div class="postFeedList">
-                        <h2>Company: <%= posts[i].title %></h2>
-                        <h2>Dept: <%= posts[i].department %></h2>
-                        <h2>Carrier: <%= posts[i].carrier %></h2>
-                        <h2>Dest: <%= posts[i].destination %></h2>
-                        <h2>Truck Type: <%= posts[i].ttype %></h2>
-                        <h2>Date/Time: <%= posts[i].ltime %></h2>
-                        <h2>Transit Time: <%= posts[i].transit %></h2>
-                        <h2>Special: <%= posts[i].special %></h2>
-                      </div>
-                    </a>
-                  </li>
-                <% } %>
-                </ul>
-            </div>
-          </div>  
-        </section>
+          </div>
+          <div class="text-center pb-8">
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Carrier: <%= posts[i].carrier %></span>
+            </p>
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Dest: <%= posts[i].destination %></span>
+            </p>
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Truck Type: <%= posts[i].ttype %></span>
+            </p>
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Date/Time: <%= posts[i].ltime %></span>
+            </p>
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Transit Time: <%= posts[i].transit %></span>
+            </p>
+            <p class="flex item-center mb-2 text-sm">
+              <span class="px-2">Special: <%= posts[i].special %></span>
+            </p>
+          </div>
+        <% } %> 
+      </div>
     </div>
+
 </main>
+
+
 
 
 
