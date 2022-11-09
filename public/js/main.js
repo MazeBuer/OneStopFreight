@@ -1,5 +1,5 @@
-//HAMBURGER MENU
-// For toggling and finding number of children and other stuff is done here!
+// //HAMBURGER MENU
+// //For toggling and finding number of children and other stuff is done here!
 
 // const navigation = document.getElementById("nav");
 // const menu = document.getElementById("menu");
@@ -15,17 +15,23 @@
 //   navigation.classList.toggle("active");
 //   menu.classList.toggle("active");
 // });
-$(document).ready(function() {
-  $(".nav-toggler").each(function(_, navToggler) {
-    var target = $(navToggler).data("target");
-    $(navToggler).on("click", function() {
-      $(target).animate({
-        height: "toggle"
-      });
-    });
-  });
-});
 
+// let $ = document.getElementById;
+// $(document).ready(function() {
+//   $(".nav-toggler").each(function(_, navToggler) {
+//     var target = $(navToggler).data("target");
+//     $(navToggler).on("click", function() {
+//       $(target).animate({
+//         height: "toggle"
+//       });
+//     });
+//   });
+// });
+
+
+document.getElementById('nav-toggle').onclick = function(){
+  document.getElementById("nav-content").classList.toggle("hidden");
+}
 
 
 //SCROLL DOWN FROM MENU
