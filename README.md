@@ -5,7 +5,7 @@
   
 <p>A new way to communicate and inform agents of transportation schedule, space availability, and CBP information all in one space. </p>
 
-<h2>Live Site: https://one-stop-freight-api.herokuapp.com </h2>
+<h2>Live Site: https://lazy-cyan-octopus-tie.cyclic.app </h2>
 </div>
 
 ## :star2: About the Project
@@ -23,7 +23,7 @@ One Stop Freight is an application designed to be a new modern way of communicat
     <li>DaisyUI</li>
     <li>RestAPI</li>
     <li>MongoDB</li>
-    <li>Heroku</li>
+    <li>Cylic</li>
     <li>Passport</li>
   </ul>
 
